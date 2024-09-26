@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Windy API Map</title>
+    <title>Windy API Rain Forecast</title>
 
-    <!-- Include Leaflet.js version 1.4.0 -->
+    <!-- Include the correct version of Leaflet.js -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
 
@@ -18,16 +18,17 @@
     <script>
         // Initialize Windy map
         const options = {
-            key: 'jnuvf0dm1LYo4dbW6anQMCnyfVqReMoa',  // Your Windy API key
-            lat: 21.8470,  // Xã Hồ Bốn latitude
-            lon: 104.8880,  // Xã Hồ Bốn longitude
-            zoom: 10,  // Zoom level
+            key: 'jnuvfOdm1LYo4dbW6anQMCnyfVqReMoa',  // Windy API key của bạn
+            lat: 21.8470,  // Latitude của Xã Hồ Bốn
+            lon: 104.8880,  // Longitude của Xã Hồ Bốn
+            zoom: 10,  // Mức độ zoom của bản đồ
+            overlay: 'rain',  // Lớp phủ hiển thị lượng mưa
         };
 
-        // Call windyInit after Windy library has been loaded
+        // Initialize Windy API map
         windyInit(options, function(windyAPI) {
             const { map } = windyAPI;
-            // Add functionality to map
+            // Bạn có thể thêm các chức năng mở rộng khác cho bản đồ tại đây nếu cần
         });
     </script>
 </body>
