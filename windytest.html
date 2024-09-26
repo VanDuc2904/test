@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windy API Map</title>
+
+    <!-- Include the correct Leaflet.js version (1.4.x) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+
+    <!-- Windy API -->
+    <script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
+</head>
+<body>
+    <div id="windy" style="width: 100%; height: 600px;"></div>
+
+    <script>
+        // Initialize Windy map
+        const options = {
+            key: 'jnuvf0dm1LYo4dbW6anQMCnyfVqReMoa',  // Your Windy API key
+            lat: 21.8470,  // Xã Hồ Bốn latitude
+            lon: 104.8880,  // Xã Hồ Bốn longitude
+            zoom: 10,  // Zoom level
+        };
+
+        // Call windyInit only after the Windy library has been fully loaded
+        windyInit(options, function(windyAPI) {
+            const { map } = windyAPI;
+            // You can add additional map functionality here
+        });
+    </script>
+</body>
+</html>
