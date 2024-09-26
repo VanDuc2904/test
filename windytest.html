@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Windy API Map</title>
 
-    <!-- Include the correct Leaflet.js version (1.4.x) -->
+    <!-- Include Leaflet.js version 1.4.0 -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
 
@@ -24,10 +24,10 @@
             zoom: 10,  // Zoom level
         };
 
-        // Call windyInit only after the Windy library has been fully loaded
+        // Call windyInit after Windy library has been loaded
         windyInit(options, function(windyAPI) {
             const { map } = windyAPI;
-            // You can add additional map functionality here
+            // Add functionality to map
         });
     </script>
 </body>
